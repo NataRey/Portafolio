@@ -35,13 +35,18 @@
         <h3>Tengo experiencia en  <span class="multiple-text"></span></h3>
         <p>Soy una apasionada desarrolladora en busca de oportunidades para crecer y aportar mis conocimientos.</p>
         <p>Mi enfoque principal es el desarrollo web, donde domino con solidez lenguajes esenciales como HTML, CSS, JavaScript y PHP. Mi experiencia se extiende al front-end con Frameworks como Angular y Node.js, y gestiono bases de datos con destreza utilizando herramientas como phpMyAdmin, MongoDB y SQL server. En la parte del back-End utilizando el patron de diseño MVC en Java o Node dependiendo del requerimiento </p>
+        <p>Soy estudiante de Ingeniería de Sistemas en etapa final con más de 3 años de experiencia en mentoría técnica y soporte en desarrollo de software. Me apasiona ayudar a las personas a resolver problemas y guiarlas paso a paso, asegurando una experiencia positiva y clara. Combino mis conocimientos técnicos en SQL, desarrollo web y pruebas de software con una comunicación empática, proactividad y orientación al cliente. Actualmente busco aportar mi experiencia en un rol de Customer Support Advisor, contribuyendo con soluciones efectivas y un servicio de alta calidad.</p>
         <div class="socialMedia">
-            <a href="https://www.linkedin.com/in/natalyreyes/" target="_blank" style="--i:6;"><i class='bx bxl-facebook-circle'></i></a>
-            <a href="https://github.com/NataRey" target="_blank" style="--i:7;"><i class='bx bxl-twitter' ></i></a>
+            <a href="https://www.linkedin.com/in/natalyreyes/" target="_blank" style="--i:6;"><i class='bx bxl-facebook-circle'></i><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" 
+       alt="LinkedIn" width="40"></a>
+            <a href="https://github.com/NataRey" target="_blank" style="--i:7;"><i class='bx bxl-twitter' ></i><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" 
+       alt="GitHub" width="40"></a>
         </div>
-        <a href="./Curriculum Hoja de vida Profesional Morado.png" class="btn">Download CV</a>
+        <a href="./hoja.html" class="btn">Curriculum</a>
     </div>
-  
+    <!-- <div class="home-img">
+        <img src="./NatalyPortafolio.jpg" class="foto" alt="Mi foto">
+    </div> -->
 </section>
 <!--SOBRE MI-->
 <section class="container-SobreMi" >
@@ -51,9 +56,9 @@
         </section>
         <section class="sobreMiTexto">
             <p>
-                ✓ Estudiante de ingeniería de sistemas último semestre en proceso de graduación <span class="hiller">Desarrolladora full stack Web</span>, con solidos conocmientos en bases de datos relacionales y no relacionales.
+                ✓ Estudiante de ingeniería de sistemas último semestre en proceso de graduación <span class="nata">Desarrolladora full stack Web</span>, con solidos conocmientos en bases de datos relacionales y no relacionales.
                 <br>
-                ✓ Tengo experiencia en <span class="hiller">Front-end</span>, usando <span class="hiller">HTML, PHP, CSS, Angular, JavaScript </span> y creando atractivas paginas segun la necesidad del uusario <span class="hiller">en el Back-end </span> Java, Node, Express <span class="hiller">y bases de datos relacionales como SLQ sever </span>, bases de datos no relacionales como php my admin y mongo DB.
+                ✓ Tengo experiencia en <span class="nata">Front-end</span>, usando <span class="nata">HTML, PHP, CSS, Angular, JavaScript </span> y creando atractivas paginas segun la necesidad del uusario <span class="nata">en el Back-end </span> Java, Node, Express <span class="nata">y bases de datos relacionales como SLQ sever </span>, bases de datos no relacionales como php my admin y mongo DB.
                 <br>
                 ✓ Inicie mi experiencia laboral como analista QA para los proyectos de Toyota. 
                 <br>
@@ -133,19 +138,24 @@
                         Tu navegador no soporta la reproducción de video.
                       </video>
                 </div>
+                
             </div>
         </div>
     </div>
 </section>
-<!--CONTACTO-->
+
+<!-- CONTACTO -->
 <section class="contacto" id="contactosSection">
     <h1>Contact</h1>
-        <a href="#" class="logo"><p>Thanks for visiting my profile and I hope we can work together soon!</p></a>
+    <a href="#" class="logo">
+        <p>Thanks for visiting my profile and I hope we can work together soon!</p>
+    </a>
+
     <div class="contacto-footer">
         <div class="form-container">
-            <form id="contactForm">  <!-- Añadir un form para el manejo de datos -->
+            <form id="contactForm">
                 <div class="form-group">
-                    <label for="nombre">Name</label> <!-- Añadir texto a los labels -->
+                    <label for="nombre">Name</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Enter your name" required>
                 </div>
                 <div class="form-group">
@@ -162,7 +172,32 @@
             </form>
         </div>
     </div>
-</section>    
+</section>
+
+<!-- EmailJS -->
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+<script>
+  // Inicializar EmailJS con tu User ID
+  (function(){
+      emailjs.init("jxFgVuwOaw8LZjR8L"); // <--- reemplaza aquí tu User ID
+  })();
+
+  // Manejar el envío del formulario
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_o75p17d', 'jxFgVuwOaw8LZjR8L', this)
+          .then(() => {
+              alert('✅ Your message has been sent successfully!');
+              document.getElementById('contactForm').reset(); // limpia el formulario
+          }, (error) => {
+              alert('❌ Error sending message: ' + JSON.stringify(error));
+          });
+  });
+</script>
+
+
+
 <!--FOOTER-->
 <footer>
     <p>&copy; 2025, Nataly Reyes Todos los derechos reservados</p>
