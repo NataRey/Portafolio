@@ -5,6 +5,7 @@ var typed = new Typed(".multiple-text", {
         "JS ",
         "PHP ",
         "ANGULAR ",
+        "REACT ",
         "NODE ",
         "JAVA ",
         "PHP MY ADMIN",
